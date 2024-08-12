@@ -82,7 +82,7 @@ public class ClienteController {
     @DeleteMapping("/{id}")
     @Operation(summary = "Eliminar Cliente", description = "Elimina un cliente específico según su ID.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "204", description = "Cliente eliminado exitosamente", content = @Content),
+            @ApiResponse(responseCode = "200", description = "Cliente eliminado exitosamente", content = @Content),
             @ApiResponse(responseCode = "403", description = "No autorizado", content = @Content),
             @ApiResponse(responseCode = "404", description = "Cliente no encontrado", content = @Content)
     })
