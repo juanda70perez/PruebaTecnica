@@ -23,6 +23,8 @@ import java.util.List;
 @RestController
 @Validated
 @RequestMapping("/api/bodegas")
+
+@CrossOrigin(origins = "*")
 @Tag(name = "Bodegas", description = "Gestión de Bodegas")
 public class BodegaController {
 
