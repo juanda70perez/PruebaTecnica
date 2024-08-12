@@ -43,10 +43,11 @@ public class EnvioMaritimo {
     @NotBlank(message = "El  cliente no puede estar vacío")
     private Cliente cliente;
 
-    public void setPrecioEnvioDescuento() {
-        if (this.getCantidad() < 10) {
-            this.precioEnvioDescuento = 0;
+    public void setCantidad(int cantidad) {
+        if (cantidad < 10) {
+             setPrecioEnvioDescuento(0);
         }
-        this.precioEnvioDescuento = (this.getPrecioEnvio() * (1 - 0.03));
+        setPrecioEnvioDescuento(this.getPrecioEnvio() * (1 - 0.03));
+        this.cantidad = cantidad;
     }
 }
